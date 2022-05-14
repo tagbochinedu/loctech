@@ -6,6 +6,9 @@ module.exports = {
     extend: {
       colors: {
         'login-blue' : '#283593',
+      },
+      skew: {
+        '17': '17deg',
       }
     },
   },
