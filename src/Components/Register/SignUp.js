@@ -83,7 +83,7 @@ const SignUp = () => {
                 </button>
                 <p className="block text-slate-500 mt-8">
                   Already have an account? Sign In{" "}
-                  <a href="/" onClick={clickHandler} className="text-red-400 font-bold">
+                  <a href="#" onClick={clickHandler} className="text-red-400 font-bold">
                     Here
                   </a>
                 </p>
@@ -91,8 +91,8 @@ const SignUp = () => {
             </form>
           </div>
           <div className="lg:relative lg:w-5/12 xs:w-full lg:h-full sm:hidden lg:block">
-            <div className="skew-x-12 bg-login-blue hidden lg:block absolute z-10 w-2/4 -left-16 h-full"></div>
-            <div className="skew-x-17 bg-red-300 hidden lg:block absolute z-0 w-1/4 -left-24 h-full"></div>
+            <div className="skew-x-12 bg-login-blue hidden lg:block absolute z-10 w-2/4 -left-20 h-full"></div>
+            <div className="skew-x-17 bg-red-300 hidden lg:block absolute z-0 w-1/4 -left-28 h-full"></div>
             <div className=" z-20 lg:absolute lg:w-full mb-12 md:mb-0 bg-login-blue lg:pl-20 sm:p-5 lg:h-full ">
               <h1 className="g:text-3xl text-2xl lg:max-w-xs pt-2 pb-2 text-white font-bold">
                 The world's leading platform for connecting professionals to

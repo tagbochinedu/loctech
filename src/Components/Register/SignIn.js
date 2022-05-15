@@ -50,8 +50,8 @@ const SignIn = (props) => {
       <div className=" h-full">
         <div className="lg:flex sm:block justify-between flex-wrap h-full g-6  ">
           <div className="lg:relative lg:w-5/12 xs:w-full lg:h-full">
-            <div className="-skew-x-12 bg-login-blue hidden lg:block absolute z-10 w-2/4 -right-16 h-full"></div>
-            <div className="-skew-x-17 bg-red-300 hidden lg:block absolute z-0 w-1/4 -right-24 h-full"></div>
+            <div className="-skew-x-12 bg-login-blue hidden lg:block absolute z-10 w-2/4 -right-20 h-full"></div>
+            <div className="-skew-x-17 bg-red-300 hidden lg:block absolute z-0 w-1/4 -right-28 h-full"></div>
             <div className="z-20 lg:absolute lg:w-full mb-12 md:mb-0 bg-login-blue lg:pl-20 sm:p-5 lg:h-full ">
               <h1 className="g:text-3xl text-2xl w-full lg:max-w-xs pt-2 pb-2 text-white font-bold">
                 Find the best candidates for your organisation
