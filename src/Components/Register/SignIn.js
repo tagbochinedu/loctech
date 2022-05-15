@@ -61,7 +61,7 @@ const SignIn = (props) => {
             </div>
           </div>
 
-          <div className="lg:w-5/12 sm:w-full  mb-12 py-2 px-6 ">
+          <div className="lg:w-5/12 sm:w-full  mb-12 sm:py-2 py-10 px-6 ">
             <form onSubmit={submitHandler}>
               <div className="flex flex-row items-center justify-center lg:justify-start text-gray-800">
                 <p className="text-lg mb-0 mr-4">Sign In</p>
