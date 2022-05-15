@@ -91,7 +91,7 @@ const SignIn = (props) => {
                 </button>
                 <p className="block text-slate-500 mt-8">
                   Don't have an account? Sign up{" "}
-                  <a href="signup" className="text-red-400 font-bold">
+                  <a href="/signup" className="text-red-400 font-bold">
                     Here
                   </a>
                 </p>
