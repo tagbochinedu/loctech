@@ -45,7 +45,7 @@ const SignIn = (props) => {
   return (
     <section className="h-screen">
       <div className=" h-full">
-        <div className="lg:flex sm:block justify-between items-center flex-wrap h-full g-6  ">
+        <div className="lg:flex sm:block justify-between flex-wrap h-full g-6  ">
           <div className="lg:relative lg:w-5/12 xs:w-full lg:h-full">
             <div className="-skew-x-12 bg-login-blue hidden lg:block absolute z-10 w-2/4 -right-16 h-full"></div>
             <div className="-skew-x-17 bg-red-300 hidden lg:block absolute z-0 w-1/4 -right-24 h-full"></div>
