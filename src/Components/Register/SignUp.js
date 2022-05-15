@@ -83,7 +83,7 @@ const SignUp = () => {
                 </button>
                 <p className="block text-slate-500 mt-8">
                   Already have an account? Sign In{" "}
-                  <a href="#" onClick={clickHandler} className="text-red-400 font-bold">
+                  <a href="signin" onClick={clickHandler} className="text-red-400 font-bold">
                     Here
                   </a>
                 </p>
