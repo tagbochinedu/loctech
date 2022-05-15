@@ -30,24 +30,24 @@ const LandingPage = () => {
               }`}
             >
               <li class="nav-item p-2">
-                <a class="nav-link text-white" href="">
+                <a class="nav-link text-white" href="home">
                   Jobs
                 </a>
               </li>
               <li class="nav-item p-2">
-                <a class="nav-link text-white" href="">
+                <a class="nav-link text-white" href="home">
                   Company Review
                 </a>
               </li>
               <li class="nav-item p-2">
-                <a class="nav-link text-white" href="">
+                <a class="nav-link text-white" href="home">
                   Find Salaries
                 </a>
               </li>
               <li class="nav-item p-2">
                 <a
                   class="nav-link text-white p-2 rounded font-bold border-1 bg-white text-login-blue "
-                  href=""
+                  href="home"
                 >
                   Post Jobs
                 </a>
