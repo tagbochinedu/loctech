@@ -28,7 +28,6 @@ const SignIn = (props) => {
       }
     ).then((res) => {
       if (res) {
-        props.signIn(res.ok);
         navigate("home");
       } else {
         res.json().then((data) => {
