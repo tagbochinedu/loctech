@@ -47,7 +47,7 @@ const SignUp = () => {
   return (
     <section className="h-screen">
       <div className=" h-full">
-        <div className="lg:flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6  ">
+        <div className="lg:flex css xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6  ">
           <div className="lg:w-5/12 sm:w-full  mb-12 py-2 px-6 ">
             <form onSubmit={submitHandler}>
               <div className="flex flex-row items-center justify-center lg:justify-start text-gray-800">
