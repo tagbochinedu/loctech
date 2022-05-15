@@ -41,6 +41,9 @@ const SignIn = (props) => {
       }
     });
   };
+  const clickHandler = () => {
+      navigate('signup')
+  }
 
   return (
     <section className="h-screen">
@@ -61,7 +64,7 @@ const SignIn = (props) => {
             </div>
           </div>
 
-          <div className="lg:w-5/12 sm:w-full  mb-12 sm:py-2 py-10 px-6 ">
+          <div className="lg:w-5/12 sm:w-full  mb-12 lg:py-20 px-6 ">
             <form onSubmit={submitHandler}>
               <div className="flex flex-row items-center justify-center lg:justify-start text-gray-800">
                 <p className="text-lg mb-0 mr-4">Sign In</p>
@@ -92,7 +95,7 @@ const SignIn = (props) => {
                 </button>
                 <p className="block text-slate-500 mt-8">
                   Don't have an account? Sign up{" "}
-                  <a href="/signup" className="text-red-400 font-bold">
+                  <a href="/signup" onClick={clickHandler} className="text-red-400 font-bold">
                     Here
                   </a>
                 </p>

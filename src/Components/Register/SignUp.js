@@ -44,6 +44,10 @@ const SignUp = () => {
     });
   };
 
+  const clickHandler = () => {
+    navigate('/')
+}
+
   return (
     <section className="h-screen">
       <div className=" h-full">
@@ -79,7 +83,7 @@ const SignUp = () => {
                 </button>
                 <p className="block text-slate-500 mt-8">
                   Already have an account? Sign In{" "}
-                  <a href="/" className="text-red-400 font-bold">
+                  <a href="/" onClick={clickHandler} className="text-red-400 font-bold">
                     Here
                   </a>
                 </p>
