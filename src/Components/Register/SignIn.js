@@ -95,9 +95,9 @@ const SignIn = (props) => {
                 </button>
                 <p className="block text-slate-500 mt-8">
                   Don't have an account? Sign up{" "}
-                  <a href="/signup" onClick={clickHandler} className="text-red-400 font-bold">
+                  <span onClick={clickHandler} className="text-red-400 font-bold">
                     Here
-                  </a>
+                  </span>
                 </p>
               </div>
             </form>
