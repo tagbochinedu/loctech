@@ -13,6 +13,8 @@ const SignIn = () => {
   const [errorText, setErrorText] = useState("");
   const [emailFocus, setEmailFocus] = useState(false);
   const [passwordFocus, setPasswordFocus] = useState(false);
+
+  
   const submitHandler = async (e) => {
     e.preventDefault();
     try {

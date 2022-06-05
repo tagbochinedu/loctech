@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Error from "../UI/Error";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate, Link } from "react-router-dom";
@@ -15,6 +15,11 @@ const SignUp = () => {
   const [passwordFocus, setPasswordFocus] = useState(false);
   const [passwordConfirmFocus, setPasswordConfirmFocus] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(()=>{
+    emailRef.current.value = '';
+    passwordRef.current.value = ''
+  }, [])
 
   const submitHandler = async (e) => {
     e.preventDefault();
