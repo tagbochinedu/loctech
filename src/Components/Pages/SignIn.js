@@ -1,20 +1,27 @@
 import React, { useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { UseAuth } from "../../Context/AuthContext";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate, Link } from "react-router-dom";
+import { auth } from "../../Firebase";
 import Image from "../../Resources/login.jpg";
 
-const SignIn = (props) => {
+const SignIn = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
   const navigate = useNavigate();
-  const { signIn } = UseAuth();
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
-    const email = emailRef.target.value;
-    const password = passwordRef.target.value;
-    signIn(email, password);
-    navigate("/home");
+    try {
+      const user = await signInWithEmailAndPassword(
+        auth,
+        emailRef.current.value,
+        passwordRef.current.value
+      );
+      console.log(user);
+      navigate("/home");
+    } catch (error) {
+      alert(error.message);
+    }
   };
 
   return (
@@ -40,29 +47,29 @@ const SignIn = (props) => {
 
           <div className="lg:w-5/12 sm:w-8/12  flex justify-center items-center ">
             <form onSubmit={submitHandler}>
-              <div className="flex flex-row items-center justify-center lg:justify-start text-gray-800">
-                <p className="text-lg mb-0 mr-4">Sign In</p>
+              <div className="text-center mb-6 text-gray-800">
+                <p className="text-lg mb-0 mr-4 text-center">Sign In</p>
               </div>
-              <div className="my-6">
+              <div className="my-2">
                 <input
                   type="text"
-                  className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                  className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none focus:shadow-sm focus:shadow-login-blue duration-700"
                   placeholder="Email address"
                   ref={emailRef}
                 />
               </div>
-              <div className="mb-6">
+              <div className="my-2">
                 <input
                   type="password"
-                  className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                  className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none focus:shadow-sm focus:shadow-login-blue duration-700"
                   placeholder="Password"
                   ref={passwordRef}
                 />
               </div>
-              <div className="text-center lg:text-left">
+              <div className="text-left ">
                 <button
                   type="submit"
-                  className="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                  className=" px-7 py-3 bg-blue-600 text-white font-medium text-sm uppercase rounded shadow-md hover:bg-blue-700 transition ease-in-out duration-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                 >
                   Sign In
                 </button>
